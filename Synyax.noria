@@ -8,3 +8,43 @@ start
     return exit(0)
 
 end
+
+
+assign Integer x = 5
+assign Boolean isTrue = truth
+assign Tuple<User, Permissions> profile
+
+check (x > 5)
+then
+    ping notify("x is large")
+else
+    ping notify("x is small")
+endcheck
+
+
+push eax, 0x01
+mov ecx, 0x02
+call interrupt(0x80)
+
+
+concurrent {
+    ping scan()
+    ping execute()
+    ping log()
+}
+mutex lock sharedResource
+
+
+define macro fast_exit {
+    return exit(1)
+}
+
+spy trace_calls()
+watch memory_access()
+
+
+open file("log.txt") as logFile
+write logFile, "Noiria launched successfully"
+close logFile
+
+
