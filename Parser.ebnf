@@ -1,0 +1,17 @@
+<program>        ::= "start" <body> "end"
+<body>           ::= { <statement> }
+<statement>      ::= <assignment> | <function_call> | <control_flow> | <opcode_call>
+
+<assignment>     ::= "assign" <type> <identifier> "=" <expression>
+<function_call>  ::= "ping" <identifier> "(" <args> ")" ["into" <identifier>]
+<opcode_call>    ::= <opcode> <register> "," <value>
+<control_flow>   ::= "chain" "when" <identifier> "ends" <chain_body> "endchain"
+
+<chain_body>     ::= "then" <function_call> ["else" <function_call>]
+<type>           ::= "Integer" | "String" | "Object" "<" <identifier> ">" | ...
+<opcode>         ::= "mov" | "push" | "pop" | "int" | ...
+<register>       ::= "eax" | "ebx" | "ecx" | ...
+<identifier>     ::= [a-zA-Z_][a-zA-Z0-9_]*
+<value>          ::= [0-9]+ | "\"" .* "\""
+<args>           ::= <expression> { "," <expression> }
+<expression>     ::= <value> | <identifier> | <function_call>
