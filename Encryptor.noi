@@ -1,0 +1,4 @@
+assign Object<Encryptor> lockbox
+lockbox = encryptor()
+
+ping lockbox.encrypt("VaultOpen") into encryptedValue
