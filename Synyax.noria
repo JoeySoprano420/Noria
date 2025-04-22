@@ -1,0 +1,10 @@
+start
+
+    assign Integer a = 42
+    assign String message = "Hello from Noiria"
+    
+    ping display(message)
+    
+    return exit(0)
+
+end
