@@ -1,0 +1,6 @@
+rubric onUserLogin {
+    ping verify("token")
+    ping updateSession()
+    chain when session.valid
+        then ping notify("Welcome")
+}
