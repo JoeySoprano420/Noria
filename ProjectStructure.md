@@ -1,0 +1,16 @@
+/noiria
+    /src
+        lexer.py
+        parser.py
+        ast.py
+        directives.py
+        encryptor.py
+        rubric.py
+        concurrency.py
+        codegen_llvm.py
+        opcode_emitter.py
+    /examples
+        shadowping.noi
+    /build
+        CMakeLists.txt
+    README.md
