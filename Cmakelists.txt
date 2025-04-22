@@ -1,2 +1,7 @@
 add_subdirectory(third_party/AES)
 include_directories(third_party/AES/src)
+
+find_package(OpenSSL REQUIRED)
+include_directories(${OPENSSL_INCLUDE_DIR})
+target_link_libraries(your_target ${OPENSSL_LIBRARIES})
+
