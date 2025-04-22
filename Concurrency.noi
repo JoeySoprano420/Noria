@@ -1,0 +1,5 @@
+concurrent {
+    ping load("profile.data")
+    ping hash("instance.sig")
+    ping render(viewport)
+}
